@@ -1,0 +1,43 @@
+@import "../mixins/media";
+@import "../utils/variables";
+
+.social {
+  display: flex;
+
+
+  &__item {
+    margin-right: 50px
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+    }
+
+    &--tw:before {
+      background-image: url("../img/twit.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &--vk:before {
+      background-image: url("../img/vk.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &--inst:before {
+      background-image: url("../img/inst.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+}

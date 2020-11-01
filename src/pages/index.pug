@@ -1,0 +1,244 @@
+extends common/layout
+
+block content
+  main.main-page
+    .wrap
+      .main-page__container
+        .main-page__header
+            h2.main-page__title Календарь
+            .main-page__tabs.tabs-triggers
+                a.tabs-triggers__item.tabs-triggers__item--active(href ="#tab-1") Запросы
+                a.tabs-triggers__item(href ="#tab-2") Записи
+                a.tabs-triggers__item(href ="#tab-3") Архив
+        .main-page__content.tabs-content
+            #tab-1.tabs-content__item.tabs-content__item--active
+              .tabs-content__table
+                ul.tabs-content__list.calendar
+                  li.calendar__item
+                    h3.calendar__title Октябрь 2018
+                    ul.calendar__card
+                      li.calendar__item.card
+                        .card__event
+                          span.card__date 25
+                          .card__wrap
+                            p.card__month Октября
+                            p.card__time 18:00 - 20:00
+                            p.card__agree Согласование
+                        .card__info
+                          .card__img.card__img--ger
+                            img(src="./img/Uzerpic(1).jpg")
+                          .card__wrap
+                            a.card__name(href ="#") Иван Сокольский
+                            p.card__about 24 года, Россия, среднее образование
+                        .card__desc
+                          p.card__type Беседа
+                          .card__lang
+                            img(src="./img/country-ger.jpg")
+                          .card__wrap-dropdawn
+                            button.card__btn
+                            ul.card__submenu
+                              li.card__sub-item
+                                a.card__sub-link(href ="#") 1 пункт
+                              li.card__sub-item
+                                a.card__sub-link(href ="#") 2 пункт
+                              li.card__sub-item
+                                a.card__sub-link(href ="#") 3 пункт
+                      li.calendar__item.card
+                        .card__event
+                          span.card__date 17
+                          .card__wrap
+                            p.card__month Октября
+                            p.card__time 18:00 - 20:00
+                            p.card__agree Согласование
+                        .card__info
+                          .card__img.card__img--port
+                            img(src="./img/Uzerpic(2).jpg")
+                          .card__wrap
+                            a.card__name(href ="#") Константин Константинопольский
+                            p.card__about 24 года, Россия, Высшее образование, Профессиональный репетитор
+                        .card__desc
+                          p.card__type Урок
+                          .card__lang
+                            img(src="./img/country-rus.jpg")
+                          .card__wrap-dropdawn
+                            button.card__btn
+                            ul.card__submenu
+                              li.card__sub-item
+                                a.card__sub-link(href ="#") 1 пункт
+                              li.card__sub-item
+                                a.card__sub-link(href ="#") 2 пункт
+                              li.card__sub-item
+                                a.card__sub-link(href ="#") 3 пункт
+                      li.calendar__item.card
+                        .card__event
+                          span.card__date 17
+                          .card__wrap
+                            p.card__month Октября
+                            p.card__time 19:00 - 20:00
+                            p.card__agree Согласование
+                        .card__info
+                          .card__img.card__img--ger
+                            img(src="./img/Uzerpic(3).jpg")
+                          .card__wrap
+                            a.card__name(href ="#") Анна Петрова
+                            p.card__about 24 года, Россия, среднее образование
+                        .card__desc
+                          p.card__type Беседа
+                          .card__lang
+                            img(src="./img/country-brit.jpg")
+                          .card__wrap-dropdawn
+                            button.card__btn
+                            ul.card__submenu
+                              li.card__sub-item
+                                a.card__sub-link(href ="#") 1 пункт
+                              li.card__sub-item
+                                a.card__sub-link(href ="#") 2 пункт
+                              li.card__sub-item
+                                a.card__sub-link(href ="#") 3 пункт
+                  li.calendar__item
+                    h3.calendar__title Ноябрь 2018
+                    ul.calendar__card
+                      li.calendar__item.card
+                        .card__event
+                          span.card__date 15
+                          .card__wrap
+                            p.card__month Ноября
+                            p.card__time 18:00 - 20:00
+                            p.card__agree Согласование
+                        .card__info
+                          .card__img.card__img--ger
+                            .card__wrap-call
+                              img(src="./img/call.svg")
+                          .card__wrap
+                            a.card__name(href ="#") Поиск собеседника
+                            p.card__about Любой пол, среднее образование
+                        .card__desc
+                          p.card__type Беседа
+                          .card__lang
+                            img(src="./img/country-ger.jpg")
+                          .card__wrap-dropdawn
+                            button.card__btn
+                            ul.card__submenu
+                              li.card__sub-item
+                                a.card__sub-link(href ="#") 1 пункт
+                              li.card__sub-item
+                                a.card__sub-link(href ="#") 2 пункт
+                              li.card__sub-item
+                                a.card__sub-link(href ="#") 3 пункт
+                      li.calendar__item.card
+                        .card__event.card__event--cancel
+                          span.card__date 17
+                          .card__wrap
+                            p.card__month Ноября
+                            p.card__time 18:00 - 20:00
+                            p.card__agree.card__agree--active Согласование
+                        .card__info
+                          .card__img.card__img--port
+                            img(src="./img/Uzerpic(4).jpg")
+                          .card__wrap
+                            a.card__name(href ="#") Катерина Иванова
+                            p.card__about 44 года, Россия, Высшее образование, Профессиональный репетитор
+                        .card__desc
+                          p.card__type Урок
+                          .card__lang
+                            img(src="./img/country-rus.jpg")
+                          .card__wrap-dropdawn
+                            button.card__btn
+                            ul.card__submenu
+                              li.card__sub-item
+                                a.card__sub-link(href ="#") 1 пункт
+                              li.card__sub-item
+                                a.card__sub-link(href ="#") 2 пункт
+                              li.card__sub-item
+                                a.card__sub-link(href ="#") 3 пункт
+            #tab-2.tabs-content__item
+              .tabs-content__table
+                ul.tabs-content__list.calendar
+                  li.calendar__item
+                    h3.calendar__title Октябрь 2018
+                    ul.calendar__card
+                      li.calendar__item.card
+                        .card__event
+                          span.card__date 17
+                          .card__wrap
+                            p.card__month Октября
+                            p.card__time 18:00 - 20:00
+                            p.card__agree Согласование
+                        .card__info
+                          .card__img.card__img--port
+                            img(src="./img/Uzerpic(2).jpg")
+                          .card__wrap
+                            a.card__name(href ="#") Константин Константинопольский
+                            p.card__about 24 года, Россия, Высшее образование, Профессиональный репетитор
+                        .card__desc
+                          p.card__type Урок
+                          .card__lang
+                            img(src="./img/country-rus.jpg")
+                          .card__wrap-dropdawn
+                              button.card__btn
+                              ul.card__submenu
+                                li.card__sub-item
+                                  a.card__sub-link(href ="#") 1 пункт
+                                li.card__sub-item
+                                  a.card__sub-link(href ="#") 2 пункт
+                                li.card__sub-item
+                                  a.card__sub-link(href ="#") 3 пункт
+
+                      li.calendar__item.card
+                        .card__event
+                          span.card__date 17
+                          .card__wrap
+                            p.card__month Октября
+                            p.card__time 19:00 - 20:00
+                            p.card__agree Согласование
+                        .card__info
+                          .card__img.card__img--ger
+                            img(src="./img/Uzerpic(3).jpg")
+                          .card__wrap
+                            a.card__name(href ="#") Анна Петрова
+                            p.card__about 24 года, Россия, среднее образование
+                        .card__desc
+                          p.card__type Беседа
+                          .card__lang
+                            img(src="./img/country-brit.jpg")
+                          .card__wrap-dropdawn
+                            button.card__btn
+                            ul.card__submenu
+                              li.card__sub-item
+                                a.card__sub-link(href ="#") 1 пункт
+                              li.card__sub-item
+                                a.card__sub-link(href ="#") 2 пункт
+                              li.card__sub-item
+                                a.card__sub-link(href ="#") 3 пункт
+            #tab-3.tabs-content__item
+              .tabs-content__table
+                ul.tabs-content__list.calendar
+                  li.calendar__item
+                    h3.calendar__title Октябрь 2018
+                    ul.calendar__card
+                      li.calendar__item.card
+                        .card__event
+                          span.card__date 17
+                          .card__wrap
+                            p.card__month Октября
+                            p.card__time 19:00 - 20:00
+                            p.card__agree Согласование
+                        .card__info
+                          .card__img.card__img--ger
+                            img(src="./img/Uzerpic(3).jpg")
+                          .card__wrap
+                            a.card__name(href ="#") Анна Петрова
+                            p.card__about 24 года, Россия, среднее образование
+                        .card__desc
+                          p.card__type Беседа
+                          .card__lang
+                            img(src="./img/country-brit.jpg")
+                          .card__wrap-dropdawn
+                            button.card__btn
+                            ul.card__submenu
+                              li.card__sub-item
+                                a.card__sub-link(href ="#") 1 пункт
+                              li.card__sub-item
+                                a.card__sub-link(href ="#") 2 пункт
+                              li.card__sub-item
+                                a.card__sub-link(href ="#") 3 пункт

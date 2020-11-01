@@ -1,0 +1,98 @@
+@import "../mixins/media";
+@import "../utils/variables";
+
+.main-header {
+  background-color: $mainTeam;
+  &__menu {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-custom(450px) {
+      padding: 20px 60px;
+    }
+  }
+
+  &__container {
+    position: absolute;
+    width: 70%;
+    right: 0;
+    top: 0;
+    background-color: $mainTeam;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column-reverse;
+    border-radius: 4px;
+
+    &--close {
+      display: none;
+    }
+
+    &--open {
+      display: flex;
+    }
+
+    @include media-custom(450px) {
+      width: 50%;
+    }
+    @include media-custom(900px) {
+      display: contents;
+    }
+  }
+
+  &__logo {
+    flex: 0 0 25%;
+  }
+
+  &__nav {
+    flex: 0 1 50%;
+    font-weight: 500;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    @include media-custom($mediaWidthMobile) {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px 0;
+    }
+    @include media-custom(900px) {
+      flex-direction: row;
+      padding: 0;
+    }
+  }
+
+  &__item {
+    &--active {
+      opacity: 0.3;
+      cursor: pointer;
+    }
+    :hover[href],
+    :focus[href] {
+      opacity: 0.5;
+    }
+    @include media-custom($mediaWidthMobile) {
+      padding: 10px 0;
+    }
+    @include media-custom(900px) {
+      padding: 0;
+    }
+  }
+
+  &__user {
+    display: flex;
+    flex: 0 0 25%;
+
+    @include media-custom($mediaWidthMobile) {
+      justify-content: initial;
+      padding: 50px 0 0 10px;
+    }
+
+    @include media-custom(900px) {
+      justify-content: flex-end;
+      padding: 0;
+    }
+  }
+}

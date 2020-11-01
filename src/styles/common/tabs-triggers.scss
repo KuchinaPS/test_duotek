@@ -1,0 +1,19 @@
+@import "../mixins/media";
+@import "../utils/variables";
+
+.tabs-triggers{
+  color: $disabledText;
+  display: flex;
+  background-color: $mark;
+  border-radius: 10px;
+
+  &__item{
+    padding: 10px 20px;
+    color: inherit;
+    border-radius: 10px;
+    &--active{
+      background-color: $mainTeam;
+      color: #FFFFFF;
+    }
+  }
+}

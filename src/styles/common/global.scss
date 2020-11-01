@@ -1,0 +1,49 @@
+@import "../../local_modules/normalize.css/normalize";
+@import "../utils/variables";
+
+:root {
+  //font-size: calc(15px + 0.22vw);
+  font-size: 15px
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #000000;
+  line-height: 1.33;
+  font-weight: 400;
+  font-size: $mainSize;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}

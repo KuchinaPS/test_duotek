@@ -1,0 +1,41 @@
+@import "../mixins/media";
+@import "../utils/variables";
+
+.user-info{
+
+  &__container{
+    display: flex;
+    flex-direction: column;
+  }
+  &__img{
+    border-radius: 50%;
+  }
+  &__name{
+    color: #ffffff;
+    font-size: $mainSize;
+  }
+  &__container-links{
+    background-color:$infoUser;
+    border-radius: 100px;
+    color: $mainTeam;
+    font-weight: bold;
+    text-align: center;
+  }
+  &__link{
+    color: inherit;
+    font-size: $smallSize;
+    padding: 0 15px;
+    &:first-child{
+      position: relative;
+      &:after{
+        content: "";
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        background-image: url("../img/rowblu.svg");
+        top: -1px;
+        right: -3px;
+      }
+    }
+  }
+}

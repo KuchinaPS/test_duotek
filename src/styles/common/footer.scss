@@ -1,0 +1,83 @@
+@import "../mixins/media";
+@import "../utils/variables";
+
+.main-footer {
+  background-color: $bgFooter;
+  padding-top: 25px;
+  padding-bottom: 50px;
+  @include media-tablet {
+    padding-top: 75px;
+    padding-bottom: 100px;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    @include media-custom(700px) {
+      flex-direction: row;
+      align-items: center;
+    }
+    @include media-custom(450px) {
+      padding: 20px 60px;
+    }
+  }
+
+  &__logo {
+    flex: 0 1 25%;
+  }
+
+  &__nav {
+    flex: 1 2 50%;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    color: #000000;
+    padding: 20px 0;
+    @include media-custom(700px) {
+      padding: 0 20px;
+    }
+  }
+
+  &__item {
+    padding: 0 0 10px;
+  }
+
+  &__item > a {
+    color: #000000;
+
+    &:hover{
+      opacity: 0.5;
+    }
+  }
+
+  &__app {
+    flex: 1 1 50%;
+    padding-bottom: 20px;
+  }
+
+  &__text {
+    width: 60%;
+    color: $disabledText;
+  }
+
+  &__container-links {
+    display: flex;
+  }
+
+  &__link {
+    padding-right: 20px;
+  }
+
+  &__social {
+    flex: 0 1 10%;
+    align-self: flex-start;
+  }
+}

@@ -1,0 +1,14 @@
+@import "../mixins/media";
+@import "../utils/variables";
+
+.calendar{
+  &__title{
+    display: block;
+    background-color: $mark;
+    color: $disabledText;
+    font-weight: 500;
+    font-size: $xsmalSize;
+    line-height: 22px;
+    padding: 7px 0 5px 14px;
+  }
+}

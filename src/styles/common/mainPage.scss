@@ -1,0 +1,31 @@
+@import "../mixins/media";
+@import "../utils/variables";
+
+.main-page {
+  &__container {
+    padding: 20px;
+    @include media-custom(450px) {
+      padding: 40px 60px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 40px;
+
+
+    @include media-custom(850px) {
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    font-size: $LSize;
+    line-height: 40px;
+    font-weight: 300;
+  }
+}

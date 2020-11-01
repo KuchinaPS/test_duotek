@@ -1,0 +1,191 @@
+@import "../mixins/media";
+@import "../utils/variables";
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include media-custom(850px) {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  &__event {
+    flex: 0 1 50%;
+    order: 0;
+    display: flex;
+    align-items: center;
+
+    &--cancel {
+      color: $cancel;
+    }
+
+    @include media-custom(850px) {
+      display: flex;
+      flex: 0 1 30%;
+      align-items: center;
+    }
+  }
+
+  &__wrap {
+    padding-left: 20px;
+  }
+
+  &__date {
+    font-weight: 500;
+    font-size: $XLSize;
+    line-height: 2.5;
+  }
+
+  &__info {
+    display: flex;
+    flex: 1 1 100%;
+    align-items: center;
+    order: 2;
+    padding-left: 5%;
+
+    @include media-custom(850px) {
+      display: flex;
+      flex: 0 1 50%;
+      align-items: center;
+      order: 0;
+    }
+  }
+
+  &__img {
+    position: relative;
+  }
+
+  &__img:before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    left: -30px;
+    z-index: -1;
+  }
+
+  &__img--ger:before {
+    background-image: url("../img/country-ger.jpg");
+  }
+
+  &__img--port:before {
+    background-image: url("../img/country-port.jpg");
+  }
+
+  &__img > img {
+    max-width: none;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__wrap-call {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #FFFFFF;
+  }
+
+  &__wrap-call > img {
+    padding: 15px;
+  }
+
+  &__name {
+    color: $mainTeam;
+    font-weight: 500;
+  }
+
+  &__about {
+    font-size: $smallSize;
+  }
+
+  &__desc {
+    display: flex;
+    flex: 0 1 41%;
+    align-items: center;
+    justify-content: flex-end;
+    order: 1;
+
+    @include media-custom(850px) {
+      display: flex;
+      flex: 0 1 25%;
+      align-items: center;
+    }
+  }
+
+  &__lang {
+    border-radius: 50%;
+    padding: 0 4%;
+    width: 40%;
+  }
+
+  &__wrap-dropdawn {
+    position: relative;
+  }
+
+  &__submenu {
+    background: #FFFFFF;
+    border: 1px solid $mainTeam;
+    position: absolute;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+    right: 0;
+    top: 25px;
+    width: 100px;
+    font-weight: 500;
+
+    &--active{
+      display: block;
+    }
+  }
+
+  &__submenu a {
+    color: $disabledText;
+  }
+
+  &__submenu a:hover {
+    transition: all 0.5s ease;
+    color: $mainTeam;
+  }
+
+  &__btn {
+    height: 20px;
+    width: 5px;
+    border: none;
+    background-image: url("../img/dot.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__agree {
+    display: none;
+    font-size: $smallSize;
+    line-height: 12px;
+    position: relative;
+
+    &--active {
+      display: block;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-image: url("../img/time.svg");
+      top: -3px;
+      left: -17px;
+    }
+  }
+}
